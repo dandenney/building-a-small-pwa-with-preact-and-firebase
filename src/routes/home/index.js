@@ -1,12 +1,12 @@
 import { h, Component } from 'preact';
+import ExercisesList from '../../components/ExercisesList';
 import style from './style';
 
 export default class Home extends Component {
 	render() {
 		return (
 			<div class={style.home}>
-				<h1>Home</h1>
-				<p>This is the Home component.</p>
+				<ExercisesList />
 			</div>
 		);
 	}

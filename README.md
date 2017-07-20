@@ -1,2 +1,6 @@
-# building-a-small-pwa-with-preact-and-firebase
-This is the code behind the blog post [Building a Small PWA with Preact and Firebase]
+# Building a Small PWA with Preact and Firebase
+This is the code behind a pending blog post.
+
+## Setup
+
+

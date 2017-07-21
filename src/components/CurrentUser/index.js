@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { auth } from '../firebase';
 
 export default class CurrentUser extends Component {
 	constructor() {
@@ -10,7 +11,7 @@ export default class CurrentUser extends Component {
 		return (
 			<article>
 				<img alt={user.displayName} src={user.photoURL} width="40" />
-				<button>Sign Out</button>
+				<button onClick={() => auth.signOut()}>Sign Out</button>
 			</article>
 		);
 	}

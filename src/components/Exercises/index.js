@@ -9,13 +9,20 @@ export default class Exercises extends Component {
 		super();
 
 		this.state = {
-			currentUser: null
+			currentUser: null,
+			exercises: null
 		};
 	}
 
 	componentDidMount() {
 		auth.onAuthStateChanged(currentUser => {
 			this.setState({ currentUser });
+		});
+
+		const exercisesRef = database.ref('/' + 'user01' + '/exercises');
+
+		exercisesRef.on('value', snapshot => {
+			this.setState({ exercises: snapshot.val() });
 		});
 	}
 

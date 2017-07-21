@@ -22,7 +22,7 @@ export default class Exercises extends Component {
 				{currentUser &&
 										<section>
 											<ExerciseList />
-											<CurrentUser />
+											<CurrentUser user={currentUser} />
 										</section>}
 			</section>
 		);

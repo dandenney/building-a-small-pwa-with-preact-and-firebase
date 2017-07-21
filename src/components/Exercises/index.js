@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { auth, database } from '../firebase';
+import CurrentUser from '../CurrentUser';
 import ExerciseList from './ExerciseList';
 import SignIn from '../SignIn';
 
@@ -18,7 +19,11 @@ export default class Exercises extends Component {
 		return (
 			<section>
 				{!currentUser && <SignIn />}
-				{currentUser && <ExerciseList />}
+				{currentUser &&
+										<section>
+											<ExerciseList />
+											<CurrentUser />
+										</section>}
 			</section>
 		);
 	}

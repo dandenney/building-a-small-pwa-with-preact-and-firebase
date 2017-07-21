@@ -3,6 +3,10 @@ import { h, Component } from 'preact';
 export default class extends Component {
 	constructor() {
 		super();
+
+		this.state = {
+			currentUser: null
+		};
 	}
 
 	render() {

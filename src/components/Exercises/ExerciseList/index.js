@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { auth } from '../../firebase';
 
 export default class ExerciseList extends Component {
 	constructor() {
@@ -7,6 +8,12 @@ export default class ExerciseList extends Component {
 		this.state = {
 			currentUser: null
 		};
+	}
+
+	componentDidMount() {
+		auth.onAuthStateChanged(currentUser => {
+			this.setState({ currentUser });
+		});
 	}
 
 	render() {

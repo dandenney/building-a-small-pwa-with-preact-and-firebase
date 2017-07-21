@@ -13,6 +13,12 @@ export default class Exercises extends Component {
 		};
 	}
 
+	componentDidMount() {
+		auth.onAuthStateChanged(currentUser => {
+			this.setState({ currentUser });
+		});
+	}
+
 	render() {
 		const currentUser = this.state;
 

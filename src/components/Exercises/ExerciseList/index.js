@@ -10,12 +10,6 @@ export default class ExerciseList extends Component {
 		};
 	}
 
-	componentDidMount() {
-		auth.onAuthStateChanged(currentUser => {
-			this.setState({ currentUser });
-		});
-	}
-
 	render() {
 		return (
 			<ul>

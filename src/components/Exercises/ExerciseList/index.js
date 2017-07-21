@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { auth } from '../../firebase';
+import { map } from 'lodash';
 
 export default class ExerciseList extends Component {
 	constructor() {
@@ -11,11 +12,11 @@ export default class ExerciseList extends Component {
 	}
 
 	render() {
+		const { user, exercises } = this.props;
 		return (
-			<ul>
-				<li>Exercise</li>
-				<li>Exercise</li>
-			</ul>
+			<section>
+				{map(exercises, (exercise, key) => <article>{exercise.name}</article>)}
+			</section>
 		);
 	}
 }

@@ -27,14 +27,14 @@ export default class Exercises extends Component {
 	}
 
 	render() {
-		const { currentUser } = this.state;
+		const { currentUser, exercises } = this.state;
 
 		return (
 			<section>
 				{!currentUser && <SignIn />}
 				{currentUser &&
 										<section>
-											<ExerciseList />
+											<ExerciseList exercises={exercises} user={currentUser} />
 											<CurrentUser user={currentUser} />
 										</section>}
 			</section>

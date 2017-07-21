@@ -20,7 +20,7 @@ export default class Exercises extends Component {
 	}
 
 	render() {
-		const currentUser = this.state;
+		const { currentUser } = this.state;
 
 		return (
 			<section>

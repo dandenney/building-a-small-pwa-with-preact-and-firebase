@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { filter, map } from 'lodash';
+import style from './style';
 
 export default class Exercise extends Component {
 	constructor() {
@@ -21,23 +22,34 @@ export default class Exercise extends Component {
 		});
 
 		return (
-			<article>
+			<article class={style.exercise}>
 				<h3>
 					{name}
 				</h3>
-				<p>
-					<div>{setting}</div> {settingType}
+				<p class={style.setting}>
+					<div class={style.settingText}>{setting}</div> {settingType}
 				</p>
-				<p>
-					<button onClick={handleFailed} setting={setting}>
-            Fail
+				<div class={style.buttons}>
+					<button
+						class={(style.button, style.buttonFailed)}
+						onClick={handleFailed}
+						setting={setting}
+					>
+						<img src="/assets/icons/bold-remove.svg" width="20" />
 					</button>
-					<button onClick={handleCompleted} setting={setting}>
-            Complete
+					<button
+						class={style.buttonCompleted}
+						onClick={handleCompleted}
+						setting={setting}
+					>
+						<img src="/assets/icons/check-simple.svg" width="30" />
 					</button>
-				</p>
-				<ul>
-					{sets && map(filters, (filter, key) => <li key={key}>{key}</li>)}
+				</div>
+				<ul class={style.completedList}>
+					{sets &&
+												map(filters, (filter, key) => (
+													<li class={style.completed} key={key} />
+												))}
 				</ul>
 			</article>
 		);

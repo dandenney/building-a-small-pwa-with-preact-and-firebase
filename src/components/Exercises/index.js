@@ -18,12 +18,14 @@ export default class Exercises extends Component {
 	componentDidMount() {
 		auth.onAuthStateChanged(currentUser => {
 			this.setState({ currentUser });
-		});
 
-		const exercisesRef = database.ref('/' + 'user01' + '/exercises');
+			const exercisesRef = database.ref(
+				'/' + this.state.currentUser.uid + '/exercises'
+			);
 
-		exercisesRef.on('value', snapshot => {
-			this.setState({ exercises: snapshot.val() });
+			exercisesRef.on('value', snapshot => {
+				this.setState({ exercises: snapshot.val() });
+			});
 		});
 	}
 

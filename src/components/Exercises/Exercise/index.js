@@ -6,7 +6,7 @@ export default class Exercise extends Component {
 	}
 
 	render() {
-		const { name, setting, settingType } = this.props;
+		const { name, setting, settingType, handleFailed } = this.props;
 		return (
 			<article>
 				<h3>
@@ -16,7 +16,7 @@ export default class Exercise extends Component {
 					<div>{setting}</div> {settingType}
 				</p>
 				<p>
-					<button setting={setting}>
+					<button onClick={handleFailed} setting={setting}>
             Fail
 					</button>
 					<button setting={setting}>

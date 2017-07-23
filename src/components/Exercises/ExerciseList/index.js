@@ -1,15 +1,30 @@
 import { h, Component } from 'preact';
-import { auth } from '../../firebase';
+import { auth, database } from '../../firebase';
 import { map } from 'lodash';
 import Exercise from '../Exercise';
 
 export default class ExerciseList extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			currentUser: null
 		};
+	}
+
+	handleFailed(key) {
+		const currentUser = this.props.user;
+		const setting = this.props.exercises[key].setting;
+		database
+			.ref('/' + currentUser.uid)
+			.child('exercises')
+			.child(key)
+			.child('/sets')
+			.push({
+				completed: false,
+				completedDate: Date.now(),
+				setting
+			});
 	}
 
 	render() {
@@ -17,7 +32,12 @@ export default class ExerciseList extends Component {
 		return (
 			<section>
 				{map(exercises, (exercise, key) => (
-					<Exercise key={key} {...exercise} user={user} />
+					<Exercise
+						handleFailed={() => this.handleFailed(key)}
+						key={key}
+						{...exercise}
+						user={user}
+					/>
 				))}
 			</section>
 		);

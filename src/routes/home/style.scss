@@ -1,5 +1,21 @@
 .home {
-	padding: 56px 20px;
+	display: flex;
+	margin: 0 auto;
+	max-width: 400px;
 	min-height: 100%;
+	padding: 20px;
 	width: 100%;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.signIn {
+  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }

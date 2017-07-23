@@ -74,4 +74,10 @@ input[type="submit"] {
 	padding: 12px 40px;
 }
 
+.flex {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
 

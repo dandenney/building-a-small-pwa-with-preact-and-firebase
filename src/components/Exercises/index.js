@@ -4,6 +4,7 @@ import CurrentUser from '../CurrentUser';
 import ExerciseList from './ExerciseList';
 import NewExercise from './NewExercise';
 import SignIn from '../SignIn';
+import style from './style';
 
 export default class Exercises extends Component {
 	constructor() {
@@ -33,14 +34,14 @@ export default class Exercises extends Component {
 		const { currentUser, exercises } = this.state;
 
 		return (
-			<section>
+			<section class="flex">
 				{!currentUser && <SignIn />}
 				{currentUser &&
-										<section>
+										<div class={style.flex}>
 											<ExerciseList exercises={exercises} user={currentUser} />
 											<NewExercise user={currentUser} />
 											<CurrentUser user={currentUser} />
-										</section>}
+										</div>}
 			</section>
 		);
 	}

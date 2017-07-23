@@ -1,12 +1,15 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Anton|Passion+One');
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
+	background: $c-bg;
+	font-family: 'Anton', cursive;
 	font-weight: 400;
-	color: #444;
+	color: $c-text;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -18,3 +21,57 @@ html, body {
 #app {
 	height: 100%;
 }
+
+h1, h2, h3, h4, h5 {
+	font-weight: 400;
+}
+
+label {
+	color: $c-text-light;
+}
+
+input {
+  background: darken($c-bg, 5%);
+  border: 0;
+  box-shadow: 0 1px lighten($c-bg, 10%);
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 2px;
+  padding: 4px;
+  width: 100%;
+}
+
+button,
+input[type="submit"],
+.button {
+  background: $c-text-light;
+  border: 0;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgba(#000, 0.2);
+  color: #ffffff;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+  margin: 24px auto 32px;
+  padding: 12px 24px;
+  width: auto;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: lighten(#5c677e, 10%);
+    outline: 0;
+    transition: background 0.3s ease-in-out;
+  }
+}
+
+input[type="submit"] {
+	background-color: #5c677e;
+	font-size: 16px;
+	padding: 12px 40px;
+}
+
+

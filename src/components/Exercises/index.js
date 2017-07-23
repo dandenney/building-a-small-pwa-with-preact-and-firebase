@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { auth, database } from '../firebase';
 import CurrentUser from '../CurrentUser';
 import ExerciseList from './ExerciseList';
+import NewExercise from './NewExercise';
 import SignIn from '../SignIn';
 
 export default class Exercises extends Component {
@@ -35,6 +36,7 @@ export default class Exercises extends Component {
 				{currentUser &&
 										<section>
 											<ExerciseList exercises={exercises} user={currentUser} />
+											<NewExercise />
 											<CurrentUser user={currentUser} />
 										</section>}
 			</section>

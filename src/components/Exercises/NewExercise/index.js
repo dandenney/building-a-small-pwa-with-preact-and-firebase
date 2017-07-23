@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { database } from '../../firebase';
+import style from './style';
 
 export default class NewExercise extends Component {
 	constructor() {
@@ -52,7 +53,7 @@ export default class NewExercise extends Component {
 				<h2>New Exercise</h2>
 
 				<form>
-					<div>
+					<div class={style.fieldset}>
 						<label for="name">Name</label>
 						<input
 							type="text"
@@ -62,8 +63,8 @@ export default class NewExercise extends Component {
 							value={this.state.name}
 						/>
 					</div>
-					<div>
-						<div>
+					<div class={style.split}>
+						<div class={style.fieldset}>
 							<label for="setting">Initial Setting</label>
 							<input
 								type="number"
@@ -73,7 +74,7 @@ export default class NewExercise extends Component {
 								value={this.state.setting}
 							/>
 						</div>
-						<div>
+						<div class={style.fieldset}>
 							<label for="settingType">Setting Type</label>
 							<input
 								type="text"
@@ -84,7 +85,7 @@ export default class NewExercise extends Component {
 							/>
 						</div>
 					</div>
-					<div>
+					<div class={style.fieldset}>
 						<label for="reps">Reps</label>
 						<input
 							type="number"
@@ -94,8 +95,8 @@ export default class NewExercise extends Component {
 							value={this.state.reps}
 						/>
 					</div>
-					<div>
-						<div>
+					<div class={style.split}>
+						<div class={style.fieldset}>
 							<label for="raiseAfter">Raise After (Sets)</label>
 							<input
 								type="number"
@@ -105,7 +106,7 @@ export default class NewExercise extends Component {
 								value={this.state.raiseAfter}
 							/>
 						</div>
-						<div>
+						<div class={style.fieldset}>
 							<label for="raiseBy">Raise By (Type)</label>
 							<input
 								type="number"

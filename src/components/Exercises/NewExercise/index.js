@@ -26,6 +26,15 @@ export default class NewExercise extends Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		const exercisesRef = database.ref('/' + this.props.user.uid + '/exercises');
+		exercisesRef.push({
+			name: this.state.name,
+			setting: this.state.setting,
+			settingType: this.state.settingType,
+			reps: this.state.reps,
+			raiseAfter: this.state.raiseAfter,
+			raiseBy: this.state.raiseBy
+		});
 	}
 
 	render() {
@@ -107,6 +116,12 @@ export default class NewExercise extends Component {
 							/>
 						</div>
 					</div>
+					<input
+						disable={!name}
+						onClick={this.handleSubmit}
+						type="submit"
+						value="Add Exercise"
+					/>
 				</form>
 			</section>
 		);

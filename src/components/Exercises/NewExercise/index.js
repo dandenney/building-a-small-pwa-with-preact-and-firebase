@@ -18,7 +18,14 @@ export default class NewExercise extends Component {
 	}
 
 	render() {
-		const name = this.state;
+		const {
+			name,
+			setting,
+			settingType,
+			raiseAfter,
+			raiseBy,
+			reps
+		} = this.state;
 		return (
 			<section>
 				<h2>New Exercise</h2>
@@ -33,6 +40,60 @@ export default class NewExercise extends Component {
 							placeholder="Chest Press"
 							value={this.state.name}
 						/>
+					</div>
+					<div>
+						<div>
+							<label for="setting">Initial Setting</label>
+							<input
+								type="number"
+								name="setting"
+								onChange={this.handleChange}
+								placeholder="85"
+								value={this.state.setting}
+							/>
+						</div>
+						<div>
+							<label for="settingType">Setting Type</label>
+							<input
+								type="text"
+								name="settingType"
+								onChange={this.handleChange}
+								placeholder="lbs"
+								value={this.state.settingType}
+							/>
+						</div>
+					</div>
+					<div>
+						<label for="reps">Reps</label>
+						<input
+							type="number"
+							name="reps"
+							onChange={this.handleChange}
+							placeholder="5"
+							value={this.state.reps}
+						/>
+					</div>
+					<div>
+						<div>
+							<label for="raiseAfter">Raise After (Sets)</label>
+							<input
+								type="number"
+								name="raiseAfter"
+								onChange={this.handleChange}
+								placeholder="6"
+								value={this.state.raiseAfter}
+							/>
+						</div>
+						<div>
+							<label for="raiseBy">Raise By (Type)</label>
+							<input
+								type="number"
+								name="raiseBy"
+								onChange={this.handleChange}
+								placeholder="5"
+								value={this.state.raiseBy}
+							/>
+						</div>
 					</div>
 				</form>
 			</section>

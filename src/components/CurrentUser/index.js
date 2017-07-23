@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { auth } from '../firebase';
+import style from './style';
 
 export default class CurrentUser extends Component {
 	constructor() {
@@ -9,9 +10,16 @@ export default class CurrentUser extends Component {
 	render() {
 		const user = this.props.user;
 		return (
-			<article>
-				<img alt={user.displayName} src={user.photoURL} width="40" />
-				<button onClick={() => auth.signOut()}>Sign Out</button>
+			<article class={style.currentUser}>
+				<img
+					alt={user.displayName}
+					class={style.avatar}
+					src={user.photoURL}
+					width="40"
+				/>
+				<button class={style.button} onClick={() => auth.signOut()}>
+          Sign Out
+				</button>
 			</article>
 		);
 	}

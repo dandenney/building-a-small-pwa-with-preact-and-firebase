@@ -1,7 +1,9 @@
+@import '../../../style/variables';
+
 .exercise {
-  background: #30353f;
+  background: $c-bg;
   box-shadow: 0 3px 6px rgba(#000, 0.2);
-  color: #ffffff;
+  color: $c-text;
   padding-top: 10px;
   position: relative;
   text-align: center;
@@ -12,20 +14,20 @@
 }
 
 h3 {
-  color: lighten(#30353f, 45%);
+  color: lighten($c-bg, 45%);
   font-weight: normal;
   margin: 0;
   text-transform: uppercase;
 }
 
 .setting {
-  color: lighten(#30353f, 45%);
+  color: lighten($c-bg, 45%);
   line-height: 1;
   margin-top: 5px;
 }
 
 .settingText {
-  color: #ffffff;
+  color: $c-text;
   font-size: 128px;
 }
 
@@ -42,7 +44,7 @@ h3 {
 
 .buttonCompleted {
   align-items: center;
-  background: #7b9058;
+  background: $c-positive;
   border: 0;
   border-radius: 50%;
   box-shadow: 0 2px 3px rgba(#000, 0.1);
@@ -58,14 +60,14 @@ h3 {
   &:hover,
   &:active,
   &:focus {
-    background: lighten(#7b9058, 10%);
+    background: lighten($c-positive, 10%);
     outline: 0;
   }
 }
 
 .buttonFailed {
   align-items: center;
-  background: #a24335;
+  background: $c-negative;
   border: 0;
   border-radius: 50%;
   box-shadow: 0 2px 3px rgba(#000, 0.1);
@@ -80,7 +82,7 @@ h3 {
   &:hover,
   &:active,
   &:focus {
-    background: lighten(#a24335, 10%);
+    background: lighten($c-negative, 10%);
     outline: 0;
   }
 }
@@ -98,18 +100,18 @@ h3 {
   width: percentage(1/6);
 
   &:nth-child(1) {
-    background: linear-gradient( to right, rgba(#7b9058, 0.4), rgba(#7b9058, 0.5));
+    background: linear-gradient( to right, rgba($c-positive, 0.4), rgba($c-positive, 0.5));
   }
   &:nth-child(2) {
-    background: linear-gradient( to right, rgba(#7b9058, 0.5), rgba(#7b9058, 0.6));
+    background: linear-gradient( to right, rgba($c-positive, 0.5), rgba($c-positive, 0.6));
   }
   &:nth-child(3) {
-    background: linear-gradient( to right, rgba(#7b9058, 0.6), rgba(#7b9058, 0.7));
+    background: linear-gradient( to right, rgba($c-positive, 0.6), rgba($c-positive, 0.7));
   }
   &:nth-child(4) {
-    background: linear-gradient( to right, rgba(#7b9058, 0.7), rgba(#7b9058, 0.8));
+    background: linear-gradient( to right, rgba($c-positive, 0.7), rgba($c-positive, 0.8));
   }
   &:nth-child(5) {
-    background: linear-gradient( to right, rgba(#7b9058, 0.8), rgba(#7b9058, 0.9));
+    background: linear-gradient( to right, rgba($c-positive, 0.8), rgba($c-positive, 0.9));
   }
 }

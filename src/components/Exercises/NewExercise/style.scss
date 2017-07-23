@@ -1,5 +1,7 @@
+@import '../../../style/variables';
+
 h2 {
-  color: #9fa6b6;
+  color: $c-text-light;
   font-weight: normal;
   margin-top: 32px;
 }

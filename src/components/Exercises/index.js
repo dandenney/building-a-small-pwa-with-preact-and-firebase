@@ -36,7 +36,7 @@ export default class Exercises extends Component {
 				{currentUser &&
 										<section>
 											<ExerciseList exercises={exercises} user={currentUser} />
-											<NewExercise />
+											<NewExercise user={currentUser} />
 											<CurrentUser user={currentUser} />
 										</section>}
 			</section>

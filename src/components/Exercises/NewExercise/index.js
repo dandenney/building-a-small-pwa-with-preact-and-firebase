@@ -1,20 +1,31 @@
 import { h, Component } from 'preact';
+import { database } from '../../firebase';
 
 export default class NewExercise extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			name: ''
+			name: '',
+			setting: '',
+			settingType: '',
+			reps: '',
+			raiseAfter: '',
+			raiseBy: ''
 		};
 
 		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleChange(e) {
 		this.setState({
 			[e.target.name]: e.target.value
 		});
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
 	}
 
 	render() {
@@ -26,6 +37,7 @@ export default class NewExercise extends Component {
 			raiseBy,
 			reps
 		} = this.state;
+
 		return (
 			<section>
 				<h2>New Exercise</h2>

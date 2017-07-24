@@ -5,9 +5,9 @@ You can see it in action at [https://pwa-preact-firebase.firebaseapp.com](https:
 
 ![Screenshot of 3 app screens](screenshot.png "Icon, Loading, App")
 
-## Tooling
-- Preact CLI `npm i -g preact-cli`
-- Firebase (Deployment) `npm install -g firebase-tools`
+## Dependencies
+- [Preact CLI](https://github.com/developit/preact-cli)
+- [Firebase](https://firebase.google.com) (Auth, Database, Hosting)
 
 ## Setup
 The best thing to do would be to create your own in Firebase and update the config, similar to how I do in the post. However, it *should* work if you:

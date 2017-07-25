@@ -6,7 +6,7 @@ You can see it in action at [https://pwa-preact-firebase.firebaseapp.com](https:
 ![Screenshot of 3 app screens](screenshot.png "Icon, Loading, App")
 
 ## Dependencies
-- [Preact CLI](https://github.com/developit/preact-cli)
+- [Preact CLI](https://github.com/developit/preact-cli) (Tooling)
 - [Firebase](https://firebase.google.com) (Auth, Database, Hosting)
 
 ## Setup

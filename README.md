@@ -1,5 +1,5 @@
 # Building a Small PWA with Preact and Firebase
-This is the code behind a [blog post](https://dandenney.com/posts/front-end-dev/building-a-small-pwa-with-react-and-firebase) of the same name.
+This is the code behind a [blog post](https://dandenney.com/posts/front-end-dev/building-a-small-pwa-with-preact-and-firebase) of the same name.
 
 You can see it in action at [https://pwa-preact-firebase.firebaseapp.com](https://pwa-preact-firebase.firebaseapp.com), but it will require authing with Google to be useful. 
 

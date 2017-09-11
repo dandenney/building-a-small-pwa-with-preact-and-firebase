@@ -17,12 +17,14 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
+    "critical": "^0.9.1",
     "eslint": "^4.2.0",
     "eslint-config-synacor": "^1.0.1",
     "firebase": "^4.1.3",
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
     "preact-cli": "^1.4.0",
+    "preact-cli-lodash": "^1.1.0",
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
